@@ -1,0 +1,41 @@
+﻿Select
+VISITA.Subject,
+CONTACT.Name, (Aparece el campo repetido OPERACION.Name) CJ: Son necesarios ambos? son cosas distintas?
+VISITA.HAY_Telefono__c,
+VISITA.HAY_Canal__c, 
+VISITA.HAY_Canal_Web_Entrada_F__c, (El campo correcto es HAY_Canal_Web_Entrada__c ??) --> Me dijo Cristina que es el F
+VISITA.HAY_Detalle_Canal__c,
+VISITA.HAY_Cerrada__c,
+VISITA.HAY_Fecha_Alta_Visita__c,
+VISITA.HAY_Status__c,
+VISITA.HAY_Tipo_Documento__c,
+VISITA.HAY_DNI__c, 
+VISITA.HAY_Importe_oferta__c, 
+VISITA.StartDateTime,
+VISITA.OwnerId, (Aparece el campo repetido OPERACION.OwnerId) CJ: Son necesarios ambos? son cosas distintas?
+VISITA.WhatId, 
+VISITA.HAY_Detail_c, (El campo correcto es HAY_Detail__c ??)
+OPERACION.Name,  (Aparece el campo repetido VISITA.Name) CJ: Son necesarios ambos? son cosas distintas?
+OPERACION.HAY_Cliente__c,
+OPERACION.HAY_Activo__c,
+OPERACION.HAY_CanalGestion__c,
+OPERACION.HAY_GestorComercial__c,
+OPERACION.HAY_Fecha_Primera_Actividad__c,
+OPERACION.HAY_Canal_Origen__c,
+OPERACION.HAY_Fecha_Ultima_Acividad__c,
+OPERACION.HAY_Estado__c,
+OPERACION.HAY_TipoVentaActivo__c, (No aparece el campo en ninguna de estas DE)
+OPERACION.OwnerId, (Aparece el campo repetido VISITA.OwnerId) CJ: Son necesarios ambos? son cosas distintas?
+OPERACION.HAY_Fecha_cambio_de_estado__c,
+OPERACION.HAY_OfertasCantidad__c,
+OPERACION.HAY_VisitasCantidad__c
+FROM
+EVENT_SALESFORCE VISITA
+      INNER JOIN HAY_OPERACION__C_SALESFORCE OPERACION ON VISITA.WhatId=OPERACION.Id
+      INNER JOIN CONTACT_SALESFORCE CONTACT ON VISITA.WhoId=CONTACT.Id
+     
+
+
+ 
+
+
