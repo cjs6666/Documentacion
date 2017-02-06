@@ -1,0 +1,21 @@
+Select
+OPERACION.Name,
+OPERACION.HAY_Cliente__c,
+OPERACION.HAY_Activo__c,
+OPERACION.HAY_CanalGestion__c,
+OPERACION.HAY_GestorComercial__c,
+OPERACION.HAY_Fecha_Primera_Actividad__c,
+OPERACION.HAY_Canal_Origen__c,
+OPERACION.HAY_Fecha_Ultima_Acividad__c,
+OPERACION.HAY_Estado__c,
+OPERACION.HAY_TipoVentaActivo__c,
+OPERACION.OwnerId,
+OPERACION.HAY_Fecha_cambio_de_estado__c,
+OPERACION.HAY_OfertasCantidad__c,
+OPERACION.HAY_VisitasCantidad__c
+FROM
+HAY_OPERACION__C_SALESFORCE OPERACION
+   INNER JOIN ACCOUNT_SALESFORCE ACCOUNT ON ACCOUNT.Id=OPERACION.HAY_Cliente__c
+
+
+
