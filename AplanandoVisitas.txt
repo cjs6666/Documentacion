@@ -1,0 +1,38 @@
+Select
+VISITA.Subject,
+CONTACT.Name,
+VISITA.HAY_Telefono__c,
+VISITA.HAY_Canal__c, 
+VISITA.HAY_Canal_Web_Entrada_F__c,
+VISITA.HAY_Detalle_Canal__c,
+VISITA.HAY_Cerrada__c,
+VISITA.HAY_Fecha_Alta_Visita__c,
+VISITA.HAY_Status__c,
+VISITA.HAY_Tipo_Documento__c,
+VISITA.HAY_DNI__c, 
+VISITA.HAY_Importe_oferta__c, 
+VISITA.StartDateTime,
+VISITA.OwnerId, 
+VISITA.WhatId, 
+VISITA.HAY_Detail_c,
+OPERACION.Name,
+OPERACION.HAY_Cliente__c,
+OPERACION.HAY_Activo__c,
+OPERACION.HAY_CanalGestion__c,
+OPERACION.HAY_GestorComercial__c,
+OPERACION.HAY_Fecha_Primera_Actividad__c,
+OPERACION.HAY_Canal_Origen__c,
+OPERACION.HAY_Fecha_Ultima_Acividad__c,
+OPERACION.HAY_Estado__c,
+OPERACION.HAY_TipoVentaActivo__c,
+OPERACION.OwnerId,
+OPERACION.HAY_Fecha_cambio_de_estado__c,
+OPERACION.HAY_OfertasCantidad__c,
+OPERACION.HAY_VisitasCantidad__c
+FROM
+EVENT_SALESFORCE VISITA
+      INNER JOIN HAY_OPERACION__C_SALESFORCE OPERACION ON VISITA.WhatId=OPERACION.Id
+      INNER JOIN CONTACT_SALESFORCE CONTACT ON VISITA.WhoId=CONTACT.Id
+      INNER JOIN ACCOUNT_SALESFORCE ACCOUNT ON ACCOUNT.Id=CONTACT.AccountId
+
+
