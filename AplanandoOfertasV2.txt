@@ -1,0 +1,51 @@
+﻿Select
+OFERTA.HAY_Activo__c, (Hay otro campo con el mismo nombre OPERACION.HAY_Activo__c) CJ: Son necesarios ambos? son cosas distintas?
+OFERTA.AnnyoOferta__c,
+OFERTA.HAY_Cliente__c, (Hay otro campo con el mismo nombre OPERACION.HAY_Cliente__c) CJ: Son necesarios ambos? son cosas distintas?
+OFERTA.HAY_Cliente_DNI__c,
+OFERTA.HAY_Cliente_Phone__c,
+OFERTA.HAY_ID__c,
+OFERTA.HAY_Importe__c, (No aparece el campo ni en oferta, ni en operación)
+OFERTA.Name, (Hay otro campo con el mismo nombre OPERACION.Name) CJ: Son necesarios ambos? son cosas distintas?
+OFERTA.HAY_Id_Activo__c,
+OFERTA.HAY_ID_Mediador__c,
+OFERTA.HAY_Estado_Oportunidad__c,
+OFERTA.HAY_COMECO__c,
+OFERTA.HAY_Fase_Operacion__c,
+OFERTA.HAY_Situacion_Operacion__c,
+OFERTA.HAY_Situacion_Expediente__c,
+OFERTA.HAY_Estado__c, (Hay otro campo con el mismo nombre OPERACION.HAY_Estado__c) CJ: Son necesarios ambos? son cosas distintas?
+OFERTA.HAY_Fecha_Recepcion_Operacion__c, 
+OFERTA.HAY_Fecha_Ultima_Actividad__c,
+OFERTA.HAY_Doc_Ind_lotes__c,
+OFERTA.HAY_Fecha_Aprobacion_Deneg_Contra__c,
+OFERTA.HAY_Fecha_contraoferta__c,
+OFERTA.HAY_Fecha_denegacion__c,
+OFERTA.HAY_Fecha_Firma_Reserva__c,
+OFERTA.HAY_Fecha_Firma_Escritura__c,
+OFERTA.HAY_Fecha_Baja_Operacion__c,
+OFERTA.HAY_Oficina_Preferente__c,
+OFERTA.HAY_Titular2__c,
+OPERACION.Name, (Hay otro campo con el mismo nombre OFERTA.Name) CJ: Son necesarios ambos? son cosas distintas?
+OPERACION.HAY_Cliente__c, (Hay otro campo con el mismo nombre OFERTA.HAY_Activo__c)CJ: Son necesarios ambos? son cosas distintas?
+OPERACION.HAY_Activo__c, (Hay otro campo con el mismo nombre OFERTA.HAY_Cliente__c)CJ: Son necesarios ambos? son cosas distintas?
+OPERACION.HAY_CanalGestion__c,
+OPERACION.HAY_GestorComercial__c,
+OPERACION.HAY_Fecha_Primera_Actividad__c,
+OPERACION.HAY_Canal_Origen__c,
+OPERACION.HAY_Fecha_Ultima_Acividad__c,
+OPERACION.HAY_Estado__c, (Hay otro campo con el mismo nombre OFERTA.HAY_Estado__c)CJ: Son necesarios ambos? son cosas distintas?
+OPERACION.HAY_TipoVentaActivo__c, (No aparece el campo ni en oferta, ni en operación)
+OPERACION.OwnerId,
+OPERACION.HAY_Fecha_cambio_de_estado__c,
+OPERACION.HAY_OfertasCantidad__c,
+OPERACION.HAY_VisitasCantidad__c
+FROM
+HAY_OFERTA__C_SALESFORCE OFERTA 
+      INNER JOIN HAY_OPERACION__C_SALESFORCE OPERACION ON OFERTA.HAY_Operacion__c=OPERACION.Id
+    
+
+
+
+
+

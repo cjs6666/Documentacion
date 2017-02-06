@@ -1,0 +1,63 @@
+﻿Select
+OPERACION.Name,
+OPERACION.HAY_Cliente__c,
+OPERACION.HAY_Activo__c,
+OPERACION.HAY_CanalGestion__c,
+OPERACION.HAY_GestorComercial__c,
+OPERACION.HAY_Fecha_Primera_Actividad__c,
+OPERACION.HAY_Canal_Origen__c,
+OPERACION.HAY_Fecha_Ultima_Acividad__c,
+OPERACION.HAY_Estado__c,
+OPERACION.HAY_TipoVentaActivo__c, (No aparece este campo ni en OPERACION, ni en ACTIVO) 
+OPERACION.OwnerId,
+OPERACION.HAY_Fecha_cambio_de_estado__c,
+OPERACION.HAY_OfertasCantidad__c,
+OPERACION.HAY_VisitasCantidad__c,
+ACTIVO.HAY_1a_2a_Residencia__c,
+ACTIVO.HAY_Breve_Descripcon_Activo__c,
+ACTIVO.HAY_Tipo_de_Activo__c,
+ACTIVO.HAY_Subtipo_Activo__c,
+ACTIVO.HAY_Tipo_Obra_2a_Mano__c,
+ACTIVO.HAY_FichaWeb__c,
+ACTIVO.HAY_Piscina__c,
+ACTIVO.HAY_Cliente__c,
+ACTIVO.HAY_Portal__c,
+ACTIVO.HAY_Indicador_Estado__c,
+ACTIVO.HAY_ComercialFDV__c,
+ACTIVO.HAY_Cod_Id_Activo_Esp__c, (SQL NO ADMITE …sp_…)
+ACTIVO.HAY_GestorComercial__c,
+ACTIVO.HAY_Situacion_Comercial__c,
+ACTIVO.HAY_Visitable__c,
+ACTIVO.HAY_Toxico__c,
+ACTIVO.HAY_Motivo_Toxico__c,
+ACTIVO.HAY_ConSituacionEspecial__c,
+ACTIVO.HAY_Disclaimer_situacion__c,
+ACTIVO.HAY_Alquilado__c,
+ACTIVO.HAY_Precio_Publicacion_Web__c,
+ACTIVO.HAY_Precio_Evento__c,
+ACTIVO.HAY_Fecha_Evento_Aprobado__c,
+ACTIVO.Fecha_fin_promo__c,
+ACTIVO.HAY_Indicador_Promocion__c,
+ACTIVO.HAY_Dormitorios__c,
+ACTIVO.HAY_Banios__c,
+ACTIVO.HAY_Ascensor__c, (El campo correcto es HAY_hay_ascensor__c) CJ: Yo veo ambos
+ACTIVO.HAY_Garage__c,
+ACTIVO.HAY_Trastero__c,
+ACTIVO.HAY_DireccionCompleta__c,
+ACTIVO.HAY_Postal_Code__c, (El campo correcto es HAY_Codigo_Postal__c??) CJ: Yo veo ambos
+ACTIVO.HAY_Municipio__c,
+ACTIVO.HAY_Provincia__c,
+ACTIVO.HAY_Numero_portal__c,
+ACTIVO.HAY_Piso__c,
+ACTIVO.HAY_Puerta__c,
+ACTIVO.HAY_Escalera__c,
+ACTIVO.HAY_AddressInMap__c,
+ACTIVO.HAY_Ocupado__c,
+ACTIVO.HAY_Estado_Posesion__c,
+ACTIVO.HAY_Mediador_Custodio__c (No aparece este campo ni en OPERACION, ni en ACTIVO)
+FROM HAY_OPERACION__C_SALESFORCE OPERACION 
+        INNER JOIN HAY_ACTIVO__C_SALESFORCE ACTIVO ON OPERACION.HAY_Activo__c=ACTIVO.Id
+        INNER JOIN ACCOUNT_SALESFORCE ACCOUNT ON OPERACION.HAY_Cliente__c=ACCOUNT.Id
+
+
+
